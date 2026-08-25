@@ -30,7 +30,9 @@ public class Github
      * Commit - A permanent snapshot of your project at a point in time.   Each commit message describes the changes made.
      * 
      * Push - Upload your commits to GitHUb so they saved online.
-     * pushed
+     * 
+     * Pull
+     * Downloads the latest version of the main branch.
      */
     
     
