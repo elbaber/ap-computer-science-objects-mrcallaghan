@@ -26,5 +26,12 @@ public class Chapter2 {
         crush.forward(50);
         crush.setPenColor(Color.RED);
         crush.forward(25);
+        
+        
+        
+        int penWidth = crush.getPenWidth();
+        
+        
+        
     }
 }
