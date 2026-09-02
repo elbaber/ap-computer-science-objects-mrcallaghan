@@ -16,5 +16,7 @@ public class String1
         String Hello = "Hello, World";                          // String literal(More common)
         int n = 7;
         System.out.println(Hello+n);
+        smallTestString = smallTestString.toUpperCase();
+        System.out.println(smallTestString);
     }
 }
