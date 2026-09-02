@@ -18,7 +18,7 @@ public class Warmup {
         city    = new String("Naperville");   //Assign values to the respective strings
         bigCity = city.toUpperCase();
         
-        System.out.print(city);               //outputs "Naperville/NAPERVILLE"
+        System.out.print(city);               //outputs "Naperville / NAPERVILLE"
         System.out.print(" / ");
         System.out.print(bigCity);
     }
