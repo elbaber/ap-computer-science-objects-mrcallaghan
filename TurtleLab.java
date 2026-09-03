@@ -7,29 +7,33 @@ import java.awt.Color;
  * @version (a version number or a date)
  */
 public class TurtleLab {
-    World  Pacific = new World();
+    static World Pacific  = new World();
     
-    Turtle Turtle1 = new Turtle(Pacific);
-    Turtle Turtle2 = new Turtle(Pacific);
+    static Turtle turtle1 = new Turtle(Pacific);
+    static Turtle turtle2 = new Turtle(Pacific);
     
     public static void main(String[] args) {
-        
+        drawStarOfGivenRadius(turtle1, 100);
     }
     
     public static void drawStarOfGivenRadius(Turtle turtle, int radius) {
-        int pentagramExteriorAngle = 324;
-        int pentagramInteriorAngle = 360-pentagramExteriorAngle;
-        double cosineOfInteriorAngle = Math.cos(pentagramInteriorAngle);
-        int intOfCosineOfInteriorAngle = (int) cosineOfInteriorAngle;
-        int sideLength             = radius * intOfCosineOfInteriorAngle;
-        
-        /*
+        int pentagramExteriorAngle   = 324;
+        int pentagramInteriorAngle   = 360-pentagramExteriorAngle;
+        double cosineOfInteriorAngle = Math.cos(pentagramInteriorAngle/2);
+        double sideLength            = radius * cosineOfInteriorAngle * 2;
+        int intSideLength            = (int) sideLength;
+        int turnAngle                = 180 - pentagramInteriorAngle;
+
         turtle.penUp();
         turtle.setHeading(0);
         turtle.forward(radius);
         turtle.turn(pentagramExteriorAngle/2);
         turtle.penDown();
-        */
+        
+        for(int i = 0; i < 5; i++) {
+            turtle.forward(intSideLength);
+            turtle.turn(turnAngle);
+        }
         
     }
 }
