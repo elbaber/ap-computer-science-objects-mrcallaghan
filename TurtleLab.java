@@ -20,14 +20,16 @@ public class TurtleLab {
         int pentagramExteriorAngle = 324;
         int pentagramInteriorAngle = 360-pentagramExteriorAngle;
         double cosineOfInteriorAngle = Math.cos(pentagramInteriorAngle);
-        int sideLength             = radius * cosineOfInteriorAngle.intValue();
+        int intOfCosineOfInteriorAngle = (int) cosineOfInteriorAngle;
+        int sideLength             = radius * intOfCosineOfInteriorAngle;
         
+        /*
         turtle.penUp();
         turtle.setHeading(0);
         turtle.forward(radius);
         turtle.turn(pentagramExteriorAngle/2);
         turtle.penDown();
-        
+        */
         
     }
 }
