@@ -3,6 +3,6 @@ public class RandomNumberGenerator
 {
     public static void main() {
         Random generator = new Random();
-        System.out.println(generator.nextInt(7));
+        System.out.println(generator.nextInt(6)+1);
     }
 }

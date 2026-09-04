@@ -12,15 +12,44 @@ public class TurtleLab {
     static Turtle turtle1 = new Turtle(Pacific);
     static Turtle turtle2 = new Turtle(Pacific);
     
-    public static void main(String[] args) {
-        drawStarOfGivenRadius(turtle1, 100);
-    }
+    static int recursionVariable;
     
-    public static void drawsmth(){ //figure out what to draw
+    public static void main(String[] args) {
+        turtle1.setPenColor(Color.black);
+        drawPentagramOfGivenRadius(turtle1, 100);
+        
+        turtle2.setPenColor(Color.magenta);
         
     }
     
-    public static void drawStarOfGivenRadius(Turtle turtle, int radius) {
+    public static void drawTriangleOfGivenRadius(Turtle turtle, int radius){
+        int    triangleExteriorAngle = 300;
+        int    triangleInteriorAngle = 360 - triangleExteriorAngle;
+        double cosineOfInteriorAngle = Math.cos(triangleInteriorAngle);
+        double sideLength            = radius * cosineOfInteriorAngle * 2;
+        int    intSideLength         = (int) sideLength;
+        int    turnAngle             = 180 - triangleInteriorAngle;
+        
+        turtle.penUp();
+        turtle.setHeading(0);
+        turtle.forward(radius);
+        turtle.turn(triangleExteriorAngle/2);
+        turtle.penDown();
+        
+        for (int i = 0; i < 3; i++) {
+            turtle.forward(intSideLength);
+            turtle.turn(turnAngle);
+        }
+    }
+    
+    public static void fractalTree(Turtle turtle, int angle, int length, double ratio, int depth) { //Used old python code
+        if (recursionVariable == depth) {
+            return;
+        }
+        
+    }
+    
+    public static void drawPentagramOfGivenRadius(Turtle turtle, int radius) {
         int    pentagramExteriorAngle = 324;
         int    pentagramInteriorAngle = 360-pentagramExteriorAngle;
         double cosineOfInteriorAngle  = Math.cos(pentagramInteriorAngle/2);
